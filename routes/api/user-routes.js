@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 });
 
 
-// =========== GET ONE USER BY ID ===========
+// =========== GET USER BY ID ===========
 // GET /api/users/1
 router.get('/:id', (req, res) => {
   User.findOne({
@@ -80,7 +80,7 @@ router.post('/login', (req, res) => {
 });
 
 
-// =========== UPDATE INFO FOR USER WITH THE ID OF ===========
+// =========== UPDATE INFO FOR USER WITH THE ID OF: ===========
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
   // expects {username: 'Ron Jameson', email: 'ron@newemail.com', password: 'newpassword1234'}
@@ -107,7 +107,7 @@ router.put('/:id', (req, res) => {
 });
 
 
-// =========== DELETE A USER WITH THE ID OF ===========
+// =========== DELETE A USER WITH THE ID OF: ===========
 // DELETE /api/users/1
 router.delete('/:id', (req, res) => {
   User.destroy({
