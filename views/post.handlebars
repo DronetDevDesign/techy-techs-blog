@@ -1,0 +1,19 @@
+<article class="post">
+  <div class="title">
+    {{title}}
+  </div>
+  <div class="meta">
+    {{created_at}}
+  </div>
+  <p>{{content}}</p>
+</article>
+
+<ul class="comment-list">
+  {{#each comments}}
+  <li>
+    <article class="comment">
+      <p>{{comment_text}}</p>
+    </article>
+  </li>
+  {{/each}}
+</ul>

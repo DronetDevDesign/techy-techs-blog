@@ -27,7 +27,7 @@ router.get('/:id', (req, res) => {
     include: [
       {
         model: Post,
-        attributes: ['id', 'title', 'post_url', 'created_at']
+        attributes: ['id', 'title', 'created_at']
       },
       // include the Comment model here:
       {
@@ -94,14 +94,14 @@ router.post('/login', (req, res) => {
       return;
     }
 
-    req.session.save(() => {
+    // req.session.save(() => {
       // declare session variables
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
       res.json({ user: dbUserData, message: 'You are now logged in!' });
-    });
+    // });
   });
 });
 
