@@ -79,13 +79,14 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 .header-container {
+  width: 100%;
   background-color: var(--warm-gray);
   display: flex;
   justify-content: space-between;
