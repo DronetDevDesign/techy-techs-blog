@@ -1,0 +1,21 @@
+<form
+  class="post-form"
+  id="post-form"
+  action="/api/posts/{{post_id}}"
+  method="post"
+>
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" value="{{title}}"/>
+  </div>
+  <div>
+    <label for="content">Content</label>
+    <textarea name="content" id="content" rows="10" value="{{content}}">{{content}}</textarea>
+  </div>
+  <div>
+    <button class="form-buttons">Update Post</button>
+  </div>
+</form>
+<button class="form-buttons" id="update-delete" post_id="{{post_id}}">Delete</button>
+
+<script src="/javascript/edit.js"></script>

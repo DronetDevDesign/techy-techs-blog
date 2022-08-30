@@ -4,13 +4,8 @@
     <article class="post">
       <div class="title">
         <a href="/post/{{id}}">{{title}}</a>
-        <p class="timestamp">Posted by {{user}} on {{created_at}}</p>
+        <p class="timestamp">Posted by <span id="post-username">{{user.username}}</span> on {{created_at}}</p>
       </div>
-      {{!-- <div class="meta">
-        {{created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-      </div> --}}
       <p class="content">{{content}}</p>
     </article>
   </li>
@@ -27,7 +22,7 @@
     <textarea name="content" id="content" rows="10"></textarea>
   </div>
   <div>
-    <button type="submit">Create</button>
+    <button type="submit" class="form-buttons">Create</button>
   </div>
 </form>
 

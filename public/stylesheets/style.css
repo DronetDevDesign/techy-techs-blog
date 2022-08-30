@@ -1,6 +1,6 @@
 :root {
   --warm-gray: #230f11;
-  --lt-gray: #baafaf;
+  --lt-gray: #c1bbb8;
   --lt-teal: #d9ead3;
   --md-teal: #96ac8d;
 }
@@ -35,8 +35,7 @@ a:hover {
 button {
   background-color: var(--warm-gray);
   border: 0;
-  padding: 1%;
-  color: white;
+  padding: 10px 0;
   font-weight: bold;
   transition: background-color .1s;
   cursor: pointer;
@@ -64,7 +63,7 @@ textarea:focus, input:focus {
 }
 
 textarea {
-  min-width: 40%;
+  width: 100%;
   min-height: 100px;
 }
 
@@ -79,7 +78,6 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  /* max-width: 1200px; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -156,6 +154,7 @@ main {
   color: var(--lt-teal);
   display: block;
   margin: auto;
+  margin-top: 25px;
   width: 160px;
   text-align: center;
   justify-content: center;
@@ -188,17 +187,29 @@ main {
   color: var(--lt-gray);
 }
 
+#post-title {
+  padding: 10px 20px;
+}
+
+.post-contents {
+  padding: 15px 20px;
+}
+
 .post .title {
   margin: 0 auto;
   display: flex;
   background-color: var(--warm-gray);
   width: 100%;
-  font-style: italic;
+  font-weight: bold;
   font-size: 20px;
   color: var(--lt-gray);
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
+}
+
+#post-username {
+  color: var(--lt-teal);
 }
 
 .timestamp {
@@ -209,6 +220,12 @@ main {
   font-size: 16px;
   padding: 0 15px;
 }
+
+#dashboard-content {
+  padding: 0 15px;
+}
+
+
 
 /* .edit-link {
   display: block;
@@ -241,6 +258,11 @@ main {
 .edit-post-form {
   margin-bottom: 5%;
 } */
+
+.title-space {
+  background-color: var(--warm-gray);
+  padding: 20px;
+}
 
  /* LOGIN and SIGNUP FORMS */
 .login-form, .signup-form {
@@ -288,9 +310,13 @@ input {
 /* LOGIN and SIGNUP FORMS */
 
 footer {
-  border-top: 1px solid #ccc;
+  background-color: var(--md-teal);
+  color: var(--lt-teal);
   display: flex;
   justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 15px;
 }

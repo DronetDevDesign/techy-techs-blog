@@ -2,11 +2,31 @@
   {{#each posts}}
     <li>
       <article class="post">
-        <div class="title">
-          <a href="/post/{{id}}">{{title}}</a>
+        <div class="title" id="dashboard-title">
+          <a href="/dashboard/{{id}}">{{title}}</a>
+          <p class="timestamp">Posted by <span id="post-username">{{user.username}}</span> on {{created_at}}</p>
         </div>
-        <p>{{content}}</p>
+        <p id="dashboard-content">{{content}}</p>
       </article>
     </li>
   {{/each}}
 </ul>
+
+<form class="post-form" id="post-form" style="display: none" action="/api/posts" method="post">
+  <div>
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" />
+     <input type="hidden" name="redirect" value="/dashboard" />
+  </div>
+  <div>
+    <label for="content">Content</label>
+    <textarea name="content" id="content" rows="10"></textarea>
+  </div>
+  <div>
+    <button type="submit">Create</button>
+  </div>
+</form>
+
+<button id="new-post">+ New Post</button>
+
+<script src="/javascript/home.js"></script>
