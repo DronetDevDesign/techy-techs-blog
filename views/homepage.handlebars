@@ -4,13 +4,14 @@
     <article class="post">
       <div class="title">
         <a href="/post/{{id}}">{{title}}</a>
+        <p class="timestamp">Posted by {{user}} on {{created_at}}</p>
       </div>
-      <div class="meta">
+      {{!-- <div class="meta">
         {{created_at}}
         |
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-      </div>
-      <p>{{content}}</p>
+      </div> --}}
+      <p class="content">{{content}}</p>
     </article>
   </li>
   {{/each}}
@@ -30,6 +31,6 @@
   </div>
 </form>
 
-<button id="new-post">New Post</button>
+<button id="new-post">+ New Post</button>
 
 <script src="/javascript/home.js"></script>

@@ -91,7 +91,6 @@ router.get('/login', (req, res) => {
 
 // dashboard route
 router.get('/dashboard', (req, res) => {
-  console.log(req.session.user_id, 123);
   const userid = req.session.user_id;
   Post.findAll({
     attributes: [

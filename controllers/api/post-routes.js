@@ -2,6 +2,17 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
 
+
+// HELPER FUNCTION FOR DATE:
+function createdAt(month, day, year) {
+  const postDate = new Date().toLocaleString('en-US').split('/');
+  console.log(postDate);
+  // return postDate;
+}
+createdAt();
+
+
+
 // =========== GET ALL POSTS ===========
 router.get('/', (req, res) => {
   Post.findAll({
