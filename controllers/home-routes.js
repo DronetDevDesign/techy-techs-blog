@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
   Post.findAll({
     limit: 5,
     order: [['created_at', 'DESC']],
-    // attributes: [
-    //   'id',
-    //   'title',
-    //   'created_at',
-    //   'content'
-    // ],
+    attributes: [
+      'id',
+      'title',
+      'created_at',
+      // 'content'
+    ],
     include: [
       {
         model: Comment,
@@ -47,7 +47,7 @@ router.get('/post/:id', (req, res) => {
     attributes: [
       'id',
       'title',
-      'content',
+      // 'content',
       'created_at',
     ],
     include: [
@@ -102,7 +102,7 @@ router.get('/dashboard', (req, res) => {
       'id',
       'title',
       'created_at',
-      'content'
+      // 'content'
     ],
     include: [
       {
@@ -147,7 +147,7 @@ router.get('/dashboard/:id', (req, res) => {
     attributes: [
       'id',
       'title',
-      'content',
+      // 'content',
       'created_at',
     ],
     include: [
