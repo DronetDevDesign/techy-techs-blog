@@ -21,6 +21,7 @@ function signupFormHandler(event) {
       window.location.replace('/')
     } else {
       alert(response.statusText);
+      // window.location.replace('/')
     }
   }
 }

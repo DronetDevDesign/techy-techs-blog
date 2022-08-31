@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
   console.log(req.session);
@@ -92,7 +93,7 @@ router.get('/login', (req, res) => {
 
 
 // dashboard route
-router.get('/dashboard', (req, res) => {
+router.get('/dashboard', withAuth, (req, res) => {
   const userid = req.session.user_id;
   console.log(req.session);
   console.log(req.session.user_id);
@@ -142,7 +143,7 @@ router.get('/signup', (req, res) => {
 
 
 // EDIT route:
-router.get('/dashboard/:id', (req, res) => {
+router.get('/dashboard/:id', withAuth, (req, res) => {
   Post.findAll({
     limit: 5,
     attributes: [
