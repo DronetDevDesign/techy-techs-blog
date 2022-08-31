@@ -1,4 +1,4 @@
-# techy-techs-blog
+# Techy Techs Blog
 ## A blog for coders who like to get technical about subjects pertaining to programming
 
 ## Purpose:
