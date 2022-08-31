@@ -14,15 +14,19 @@ function signupFormHandler(event) {
         password
       }),
       headers: { 'Content-Type': 'application/json' }
-    });
-    // check the response status
-    if (response.ok) {
-      console.log('success');
-      window.location.replace('/')
-    } else {
-      alert(response.statusText); // getting ALERT popup "undefined"
-      // window.location.replace('/')
-    }
+    }).then( res => {
+      return res.json()
+    })
+    .then( data => {
+      if (data.id) {
+        window.location.replace('/')
+      } else {
+        alert('Inavlid login, please try again');
+      }
+    })
+    .catch(error => {
+      alert(error.message);
+    })
   }
 }
 
