@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
       'id',
       'title',
       'created_at',
-      // 'content'
+      'content'
     ],
     include: [
       {
@@ -47,7 +47,7 @@ router.get('/post/:id', (req, res) => {
     attributes: [
       'id',
       'title',
-      // 'content',
+      'content',
       'created_at',
     ],
     include: [
@@ -102,7 +102,7 @@ router.get('/dashboard', (req, res) => {
       'id',
       'title',
       'created_at',
-      // 'content'
+      'content'
     ],
     include: [
       {
@@ -147,7 +147,7 @@ router.get('/dashboard/:id', (req, res) => {
     attributes: [
       'id',
       'title',
-      // 'content',
+      'content',
       'created_at',
     ],
     include: [
