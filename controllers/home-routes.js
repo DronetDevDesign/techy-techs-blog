@@ -184,7 +184,8 @@ router.get('/dashboard/:id', withAuth, (req, res) => {
 router.get('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      res.redirect('/')
+      req.session = null
+      res.redirect('/') 
     });
   }
   else {
