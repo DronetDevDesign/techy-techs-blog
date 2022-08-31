@@ -20,7 +20,7 @@ function signupFormHandler(event) {
       console.log('success');
       window.location.replace('/')
     } else {
-      alert(response.statusText);
+      alert(response.statusText); // getting ALERT popup "undefined"
       // window.location.replace('/')
     }
   }
