@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
   Post.findAll({
     limit: 5,
     order: [['created_at', 'DESC']],
-    attributes: [
-      'id',
-      'title',
-      'created_at',
-      'content'
-    ],
+    // attributes: [
+    //   'id',
+    //   'title',
+    //   'created_at',
+    //   'content'
+    // ],
     include: [
       {
         model: Comment,
