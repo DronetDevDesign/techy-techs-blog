@@ -5,6 +5,7 @@ const { Post, User, Comment } = require('../models');
 router.get('/', (req, res) => {
   console.log(req.session);
   Post.findAll({
+    limit: 5,
     order: [['created_at', 'DESC']],
     attributes: [
       'id',
@@ -42,6 +43,7 @@ router.get('/', (req, res) => {
 router.get('/post/:id', (req, res) => {
   console.log(req.session);
   Post.findAll({
+    limit: 5,
     attributes: [
       'id',
       'title',
@@ -95,6 +97,7 @@ router.get('/dashboard', (req, res) => {
   console.log(req.session);
   console.log(req.session.user_id);
   Post.findAll({
+    limit: 5,
     attributes: [
       'id',
       'title',
@@ -140,6 +143,7 @@ router.get('/signup', (req, res) => {
 // EDIT route:
 router.get('/dashboard/:id', (req, res) => {
   Post.findAll({
+    limit: 5,
     attributes: [
       'id',
       'title',
