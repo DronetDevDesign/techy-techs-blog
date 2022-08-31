@@ -24,7 +24,7 @@ e-commify is an ecommerce product app. The user loads the seeds by typing "npm r
 
 <br>
 
-## This Command Line App Created Using:
+## This Full-stack App Was Created Using:
 * HTML
 * CSS
 * JavaScript
