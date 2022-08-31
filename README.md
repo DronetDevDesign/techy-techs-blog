@@ -2,7 +2,7 @@
 ## A blog for coders who like to get technical about subjects pertaining to programming
 
 ## Purpose:
-e-commify is an ecommerce product app. The user loads the seeds by typing "npm run seed" in the terminal then the user types "npm start" to load the database and access the server. The user should then use Insomnia to test and access the the ecommerce database product, category and tag routes. The user can GET, POST, PUT and DELETE products, categories and tags. It's extremely easy to use!
+The Techy Techs Blog is a fun way to get the latest trends, questions and solutions about programming languages. Sign up and get a profile by creating a username, your email address and a password! It's extremely easy to use!
 
 ## Heroku App Link:
 ## https://techy-techs-blog.herokuapp.com/
